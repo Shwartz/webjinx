@@ -20,12 +20,14 @@ module.exports = function (grunt) {
 
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
+
 		sass: {
 			dev: {
 				options: {
+					includePaths: require('node-bourbon').includePaths,
 					sourceMap: true
 				},
-				files: {'style.css': 'style.scss'}
+				files: {'dev/css/style.css': 'src/scss/style.scss'}
 			},
 			dist: {
 				options: {
@@ -35,7 +37,7 @@ module.exports = function (grunt) {
 				files: {'style.css': 'style.scss'}
 			}
 		},
-		requirejs: {
+		/*requirejs: {
 			// global config
 			options: {
 				baseUrl: 'js/src',
@@ -50,7 +52,7 @@ module.exports = function (grunt) {
 				// overwrites the default config above
 				options: {
 					dir: 'dev',
-					optimize: 'none' // /* uglify2|none */
+					optimize: 'none' // /!* uglify2|none *!/
 				}
 			},
 			dist: {
@@ -62,11 +64,11 @@ module.exports = function (grunt) {
 
 					out: "js/dist/app.min.js",
 					optimize: 'uglify2',
-					preserveLicenseComments: true, /*Cannot use preserveLicenseComments and generateSourceMaps together. Either explcitly set preserveLicenseComments to false (default is true) or turn off generateSourceMaps. If you want source maps with license comments, see: http://requirejs.org/docs/errors.html#sourcemapcomments*/
+					preserveLicenseComments: true, /!*Cannot use preserveLicenseComments and generateSourceMaps together. Either explcitly set preserveLicenseComments to false (default is true) or turn off generateSourceMaps. If you want source maps with license comments, see: http://requirejs.org/docs/errors.html#sourcemapcomments*!/
 					generateSourceMaps: false
 				}
 			}
-		},
+		},*/
 		watch: {
 			css: {
 				files: ['sass/**/*.scss', 'style.scss', '!sass/sass-libs/**/*'],
