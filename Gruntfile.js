@@ -32,9 +32,10 @@ module.exports = function (grunt) {
 			dist: {
 				options: {
 					environment: 'production',
+					includePaths: require('node-bourbon').includePaths,
 					outputStyle: 'compressed' //CSS output mode. Can be: nested, expanded, compact, compressed.
 				},
-				files: {'style.css': 'style.scss'}
+				files: {'dist/css/style.css': 'src/scss/style.scss'}
 			}
 		},
 		/*requirejs: {

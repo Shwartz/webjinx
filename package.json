@@ -1,5 +1,5 @@
 {
-  "name": "Webjinx - framework for responsive websites",
+  "name": "Webjinx - HTML/CSS/JS framework for responsive websites",
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "~0.4.5",
