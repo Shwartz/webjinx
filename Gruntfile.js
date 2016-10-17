@@ -46,8 +46,8 @@ module.exports = function (grunt) {
 				dest: 'dev/',
 				options: {
 					process: function(content, srcpath) {
-						//content = content.replace(/@@gruntDataMain/, 'data-main="scripts/setup"');
-						//content = content.replace(/@@gruntDataPath/, 'scripts/lib/require.js');
+						content = content.replace(/@@gruntDataMain/, 'data-main="js/setup"');
+						content = content.replace(/@@gruntDataPath/, 'js/lib/require.js');
 						return content;
 					}
 				}
@@ -60,17 +60,17 @@ module.exports = function (grunt) {
 				options: {
 					process: function(content, srcpath) {
 						content = content.replace(/@@gruntDataMain/, '');
-						content = content.replace(/@@gruntDataPath/, 'scripts/app.min.js');
+						content = content.replace(/@@gruntDataPath/, 'js/app.min.js');
 						return content;
 					}
 				}
 			}
 		},
-		/*requirejs: {
+		requirejs: {
 			// global config
 			options: {
-				baseUrl: 'js/src',
-				mainConfigFile: 'js/src/setup.js',
+				baseUrl: 'src/js',
+				mainConfigFile: 'src/js/setup.js',
 				paths: {
 					app: 'app',
 					lib: 'lib'
@@ -80,8 +80,8 @@ module.exports = function (grunt) {
 			dev: {
 				// overwrites the default config above
 				options: {
-					dir: 'dev',
-					optimize: 'none' // /!* uglify2|none *!/
+					dir: 'dev/js',
+					optimize: 'none' // /* uglify2|none */
 				}
 			},
 			dist: {
@@ -91,13 +91,13 @@ module.exports = function (grunt) {
 					include: ['setup'],
 
 
-					out: "js/dist/app.min.js",
+					out: "dist/js/app.min.js",
 					optimize: 'uglify2',
-					preserveLicenseComments: true, /!*Cannot use preserveLicenseComments and generateSourceMaps together. Either explcitly set preserveLicenseComments to false (default is true) or turn off generateSourceMaps. If you want source maps with license comments, see: http://requirejs.org/docs/errors.html#sourcemapcomments*!/
-					generateSourceMaps: false
+					preserveLicenseComments: false, /*Cannot use preserveLicenseComments and generateSourceMaps together. Either explcitly set preserveLicenseComments to false (default is true) or turn off generateSourceMaps. If you want source maps with license comments, see: http://requirejs.org/docs/errors.html#sourcemapcomments*/
+					generateSourceMaps: true
 				}
 			}
-		},*/
+		},
 		watch: {
 			css: {
 				files: ['sass/**/*.scss', 'style.scss', '!sass/sass-libs/**/*'],

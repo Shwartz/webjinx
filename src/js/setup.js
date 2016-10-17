@@ -6,7 +6,7 @@
 
 requirejs.config({
     urlArgs: "bust=" + (new Date()).getTime(),
-    baseUrl: '/app/src/js/',
+    baseUrl: '/app-proto/src/js/',
     paths: {
         app: 'app',
         main: 'app/main'
