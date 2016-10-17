@@ -51,9 +51,15 @@ Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, re
 
 body {
 	background: #fff3e3;
-	color: #806931;
+	color: #703945;
 }
 
-section {
-	@include linear-gradient(to top, red, orange);
+.wrap {
+	@include container(80em);
+	background: yellow;
+}
+
+nav {
+	@include span(3 of 12);
+	background: red;
 }

@@ -24,6 +24,7 @@ module.exports = function (grunt) {
 		sass: {
 			dev: {
 				options: {
+					require: 'susy',
 					includePaths: require('node-bourbon').includePaths,
 					sourceMap: true
 				},
