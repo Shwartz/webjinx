@@ -38,6 +38,34 @@ module.exports = function (grunt) {
 				files: {'dist/css/style.css': 'src/scss/style.scss'}
 			}
 		},
+		copy: {
+			htmldev: {
+				expand: true,
+				cwd: 'src/html/',
+				src: ['*.html'],
+				dest: 'dev/',
+				options: {
+					process: function(content, srcpath) {
+						//content = content.replace(/@@gruntDataMain/, 'data-main="scripts/setup"');
+						//content = content.replace(/@@gruntDataPath/, 'scripts/lib/require.js');
+						return content;
+					}
+				}
+			},
+			htmldist: {
+				expand: true,
+				cwd: 'src/pages/',
+				src: ['*.html'],
+				dest: 'dist/',
+				options: {
+					process: function(content, srcpath) {
+						content = content.replace(/@@gruntDataMain/, '');
+						content = content.replace(/@@gruntDataPath/, 'scripts/app.min.js');
+						return content;
+					}
+				}
+			}
+		},
 		/*requirejs: {
 			// global config
 			options: {
@@ -81,6 +109,8 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-sass');
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
+	grunt.loadNpmTasks('grunt-contrib-copy');
+
 	grunt.registerTask('default', ['environment']);
 
 	grunt.registerTask('dev', [

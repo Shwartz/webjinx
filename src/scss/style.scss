@@ -49,6 +49,10 @@ Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, re
 */
 //@import 'sass/..';
 
+body {
+	background: #fff3e3;
+}
+
 section {
 	@include linear-gradient(to top, red, orange);
 }
