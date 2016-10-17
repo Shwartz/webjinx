@@ -140,7 +140,9 @@ module.exports = function (grunt) {
 	]);
 
 	grunt.registerTask('dist', [
-		'sass:' + path,
+		'clean:dist',
+		'sass:dist',
+		'copy:htmldist',
 		'requirejs:dist'
 	]);
 };
