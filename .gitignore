@@ -27,5 +27,5 @@ Temporary Items
 **/*.sass-cache
 **/node_modules
 .idea
-temp/
-dev/
+temp
+dev

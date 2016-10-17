@@ -54,7 +54,7 @@ module.exports = function (grunt) {
 			},
 			htmldist: {
 				expand: true,
-				cwd: 'src/pages/',
+				cwd: 'src/html/',
 				src: ['*.html'],
 				dest: 'dist/',
 				options: {
