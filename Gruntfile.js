@@ -66,6 +66,14 @@ module.exports = function (grunt) {
 				}
 			}
 		},
+		clean: {
+			dev: {
+				src: ['dev/']
+			},
+			dist: {
+				src: ['dist/']
+			}
+		},
 		requirejs: {
 			// global config
 			options: {
@@ -89,8 +97,6 @@ module.exports = function (grunt) {
 				options: {
 					name: 'lib/require',
 					include: ['setup'],
-
-
 					out: "dist/js/app.min.js",
 					optimize: 'uglify2',
 					preserveLicenseComments: false, /*Cannot use preserveLicenseComments and generateSourceMaps together. Either explcitly set preserveLicenseComments to false (default is true) or turn off generateSourceMaps. If you want source maps with license comments, see: http://requirejs.org/docs/errors.html#sourcemapcomments*/
@@ -100,8 +106,16 @@ module.exports = function (grunt) {
 		},
 		watch: {
 			css: {
-				files: ['sass/**/*.scss', 'style.scss', '!sass/sass-libs/**/*'],
+				files: ['src/scss/**/*.scss'],
 				tasks: ['sass:dev']
+			},
+			html: {
+				files: ['src/html/**/*.html'],
+				tasks: ['copy:htmldev']
+			},
+			js: {
+				files: ['src/js/**/*.js'],
+				tasks: ['requirejs:dev']
 			}
 		}
 	});
@@ -110,11 +124,18 @@ module.exports = function (grunt) {
 	grunt.loadNpmTasks('grunt-contrib-watch');
 	grunt.loadNpmTasks('grunt-contrib-requirejs');
 	grunt.loadNpmTasks('grunt-contrib-copy');
+	grunt.loadNpmTasks('grunt-contrib-clean');
 
-	grunt.registerTask('default', ['environment']);
+	grunt.registerTask('default', function () {
+		var msg = 'Use $:grunt dev or $grunt:dist, more info at Gruntfile.js or readme.md';
+		grunt.log.write(msg);
+	});
 
 	grunt.registerTask('dev', [
-		'sass:' + path,
+		'clean:dev',
+		'sass:dev',
+		'copy:htmldev',
+		'requirejs:dev',
 		'watch'
 	]);
 

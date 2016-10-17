@@ -1,8 +1,9 @@
 {
-  "name": "Webjinx - HTML/CSS/JS framework for responsive websites",
+  "name": "webjinx",
   "version": "0.1.0",
   "devDependencies": {
     "grunt": "~0.4.5",
+    "grunt-contrib-clean": "^1.0.0",
     "grunt-contrib-copy": "^1.0.0",
     "grunt-contrib-requirejs": "^0.4.4",
     "grunt-contrib-watch": "^0.6.1",
