@@ -49,17 +49,27 @@ Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, re
 */
 //@import 'sass/..';
 
+@import "settings";
+@import "utils/normalize";
+
+
+
 body {
 	background: #fff3e3;
 	color: #703945;
+	font-size: 16px;
 }
 
 .wrap {
-	@include container(80em);
+	@include container(50em);
 	background: yellow;
 }
 
 nav {
 	@include span(3 of 12);
 	background: red;
+}
+
+.col1 {
+	@include span(1 of 12);
 }
