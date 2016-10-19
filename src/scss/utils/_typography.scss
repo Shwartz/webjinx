@@ -1,0 +1,20 @@
+@import "../../../node_modules/bourbon/app/assets/stylesheets/bourbon";
+
+$base-font-size: 16px;
+$heading-font-family: "Helvetica Neue", Helvetica, Roboto, Arial, sans-serif;
+$modular-scale-ratio: $major-second;
+$modular-scale-base: 1.2em;
+
+h1 {
+	font-size: modular-scale(3);
+}
+h2 {
+	font-size: modular-scale(2);
+}
+h3 {
+	font-size: modular-scale(1);
+}
+
+h1, h2, h3, p {
+	margin: 0 0 1em;
+}

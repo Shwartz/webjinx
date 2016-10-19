@@ -48,10 +48,9 @@ Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, re
 	SITE SPECIFIC STYLING GOES HERE
 */
 //@import 'sass/..';
-
 @import "settings";
 @import "utils/normalize";
-
+@import "utils/typography";
 
 
 body {
@@ -62,7 +61,7 @@ body {
 
 .wrap {
 	@include container(50em);
-	background: yellow;
+	background: #ffffff;
 }
 
 nav {
