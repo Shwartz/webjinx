@@ -6,7 +6,7 @@ $susy: (
 	container: auto,
 	container-position: center,
 	columns: 12,  // The number of columns in your grid
-	gutters: 1/4, // The size of a gutter in relation to a single column
+	gutters: 0.5, // The size of a gutter in relation to a single column
 	column-width: false,
 	global-box-sizing: content-box,
 	last-flow: to,
