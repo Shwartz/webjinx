@@ -2,3 +2,20 @@
 	Rows and columns
 */
 
+section {
+	@include clearfix;
+}
+
+.col8 {
+	@include span(8 of 12);
+	@extend .dev-bg;
+}
+
+.col4 {
+	@include span(4 of 12);
+	@extend .dev-bg;
+}
+
+section div:last-child {
+	@include last;
+}

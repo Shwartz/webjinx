@@ -1,0 +1,9 @@
+nav.main {
+	@include span(12 of 12);
+	@extend .dev-bg;
+	padding: 10px 0;
+
+	li {
+		display: inline;
+	}
+}
