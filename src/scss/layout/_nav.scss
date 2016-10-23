@@ -1,5 +1,6 @@
 nav.main {
-	@include span(12 of 12);
+	@include span(full);
+	@include clearfix;
 	@extend .dev-bg;
 	padding: 10px 0;
 

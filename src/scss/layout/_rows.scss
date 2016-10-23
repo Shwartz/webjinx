@@ -2,7 +2,10 @@
 	Rows and columns
 */
 
+
 section {
+	margin: 10px 0;
+	@include span(full);
 	@include clearfix;
 }
 
@@ -10,6 +13,18 @@ section {
 	@include span(8 of 12);
 	@extend .dev-bg;
 }
+
+.col6 {
+	@include span(2 of 12 0.2);
+
+
+	@include susy-breakpoint(1200px) {
+		background: red;
+	}
+	@extend .dev-bg;
+
+}
+
 
 .col4 {
 	@include span(4 of 12);
