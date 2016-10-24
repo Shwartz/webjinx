@@ -39,13 +39,30 @@ body {
 .wrap {
 
 }
+$susy: (
+	debug: (
+		image: show,
+		color: rgba(255,50,50,0.5),
+		output: overlay,
+		toggle: top right,
+	),
+);
 
 .container {
-	width: 100%;
-	@include clearfix;
+
+	@include show-grid(overlay);
+
+	@include container(4 center);
+
+	@include susy-media($tabletLandscape) {
+		@include container(8 center);
+	}
+
 
 	@include susy-media($desktop)  {
-		@include container(1200px);
+		@include container(12 center);
+		max-width: $desktop;
+		margin: 0 auto;
 	}
 }
 

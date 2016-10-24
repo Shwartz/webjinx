@@ -2,15 +2,20 @@
 	Rows and columns
 */
 // Local vars
-.extend_padding {
+%extend_padding {
 	padding: 20px;
 }
 
+%extend_last {
+	@include last;
+	background: yellow;
+}
 
 section {
-	margin: 10px 0;
-	@include span(full);
-	@include clearfix;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	//@include span(full);
+	//@include clearfix;
 	@include container;
 }
 
@@ -22,22 +27,53 @@ section {
 	}
 }
 
-.col2_no-gutter {
-	@include span(6 of 12 0);
-	@extend .extend_padding;
+.col2 {
+	@include span(6 of 12);
+
+	.no-gutter & {
+		@include span(6 of 12 0);
+		margin-right: 0;
+	}
+
+	&.last {
+		@extend %extend_last;
+	}
+	@extend %extend_padding;
 	@extend .dev-bg;
 }
 
-
 .col4 {
 	@include span(4 of 12);
-	@extend .extend_padding;
+	@extend %extend_padding;
+	&.last {
+		@extend %extend_last;
+	}
+	@extend .dev-bg;
+}
+
+.col4-move4 {
+	@include span(isolate 3 at 4);
+	@extend .dev-bg;
+}
+
+.col4-move7 {
+	@include span(isolate 3 at 7);
 	@extend .dev-bg;
 }
 
 .col6 {
-	@include span(2 of 12 0.2);
-	@extend .extend_padding;
+	@include span(2 of 12);
+	@extend %extend_padding;
+	&.last {
+		@extend %extend_last;
+	}
+
+	.narrow & {
+		@include span(2 of 12 0.2);
+		&.last {
+			@extend %extend_last;
+		}
+	}
 
 	@include susy-breakpoint(1200px) {
 		background: #ecffbe;
@@ -48,11 +84,7 @@ section {
 
 .col8 {
 	@include span(8 of 12);
-	@extend .extend_padding;
+	@extend %extend_padding;
 	@extend .dev-bg;
 }
 
-// Make last (row || section) elem right-margin:0;
-section div:last-child:not(.row) {
-	@include last;
-}

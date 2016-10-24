@@ -1,8 +1,9 @@
 nav.main {
-	@include span(full);
-	@include clearfix;
-	@extend .dev-bg;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	@include container;
 	padding: 10px 0;
+	@extend .dev-bg;
 
 	li {
 		display: inline;
