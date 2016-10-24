@@ -1,5 +1,14 @@
 #Webjinx
 
+###Build
+Currently fairly simple build process:
+`grunt dev` - for building DEV environment
+`grunt dist` - for building DIST environment
+
+Grunt DEV has watcher for JS, SCSS and HTML files in /src/
+
+I am using RequireJS to build JavaScript
+
 Note: to add support for Susy highlighting in PhpStorm use 
 Preference -> Languages and Frameworks
 
