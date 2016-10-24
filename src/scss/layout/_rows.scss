@@ -1,36 +1,58 @@
 /*
 	Rows and columns
 */
+// Local vars
+.extend_padding {
+	padding: 20px;
+}
 
 
 section {
 	margin: 10px 0;
 	@include span(full);
 	@include clearfix;
+	@include container;
 }
 
-.col8 {
-	@include span(8 of 12);
-	@extend .dev-bg;
-}
+.row {
+	@include container;
 
-.col6 {
-	@include span(2 of 12 0.2);
-
-
-	@include susy-breakpoint(1200px) {
-		background: red;
+	.stories & {
+		margin-bottom: gutter();
 	}
-	@extend .dev-bg;
+}
 
+.col2_no-gutter {
+	@include span(6 of 12 0);
+	@extend .extend_padding;
+	@extend .dev-bg;
 }
 
 
 .col4 {
 	@include span(4 of 12);
+	@extend .extend_padding;
 	@extend .dev-bg;
 }
 
-section div:last-child {
+.col6 {
+	@include span(2 of 12 0.2);
+	@extend .extend_padding;
+
+	@include susy-breakpoint(1200px) {
+		background: #ecffbe;
+	}
+	@extend .dev-bg;
+
+}
+
+.col8 {
+	@include span(8 of 12);
+	@extend .extend_padding;
+	@extend .dev-bg;
+}
+
+// Make last (row || section) elem right-margin:0;
+section div:last-child:not(.row) {
 	@include last;
 }
