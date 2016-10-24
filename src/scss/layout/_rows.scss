@@ -5,6 +5,13 @@
 .extend_padding {
 	padding: 20px;
 }
+%test-extend {
+	color: red;
+}
+
+.bum {
+	@extend %test-extend;
+}
 
 
 section {
