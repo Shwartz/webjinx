@@ -443,22 +443,16 @@ html {
 section {
   margin-top: 10px;
   margin-bottom: 10px;
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  section:after {
-    content: " ";
-    display: block;
-    clear: both; }
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
 
 .row {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
-  .row:after {
-    content: " ";
-    display: block;
-    clear: both; }
+  width: 100%;
+  float: left;
+  margin-left: 0;
+  margin-right: 0; }
   .stories .row {
     margin-bottom: 2.8571428571%; }
 
@@ -540,9 +534,7 @@ body {
   font-size: 16px; }
 
 .container {
-  max-width: 100%;
-  margin-left: auto;
-  margin-right: auto; }
+  max-width: 100%; }
   head {
     display: block;
     position: fixed;
@@ -599,59 +591,14 @@ body {
       background-origin: content-box;
       background-clip: content-box;
       background-position: left top; }
-  @media (min-width: 768px) {
-    .container {
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto; }
-      .container:after {
-        content: " ";
-        display: block;
-        clear: both; }
-      head:hover ~ .container,
-      head:hover ~ body .container {
-        position: relative; }
-        head:hover ~ .container:before,
-        head:hover ~ body .container:before {
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          content: " ";
-          z-index: 998;
-          background-image: linear-gradient(to right, rgba(255, 50, 50, 0.31), rgba(255, 127, 127, 0.31) 80%, transparent 80%);
-          background-size: 12.8205128205%;
-          background-origin: content-box;
-          background-clip: content-box;
-          background-position: left top; } }
-  @media (min-width: 1200px) {
-    .container {
-      max-width: 100%;
-      margin-left: auto;
-      margin-right: auto;
-      max-width: 1200px;
-      margin: 0 auto; }
-      .container:after {
-        content: " ";
-        display: block;
-        clear: both; }
-      head:hover ~ .container,
-      head:hover ~ body .container {
-        position: relative; }
-        head:hover ~ .container:before,
-        head:hover ~ body .container:before {
-          position: absolute;
-          top: 0;
-          left: 0;
-          bottom: 0;
-          right: 0;
-          content: " ";
-          z-index: 998;
-          background-image: linear-gradient(to right, rgba(255, 50, 50, 0.31), rgba(255, 127, 127, 0.31) 80%, transparent 80%);
-          background-size: 8.4745762712%;
-          background-origin: content-box;
-          background-clip: content-box;
-          background-position: left top; } }
+
+@media (min-width: 768px) {
+  .container {
+    background: rgba(250, 128, 114, 0.31); } }
+
+@media (min-width: 1200px) {
+  .container {
+    background: rgba(185, 205, 250, 0.33);
+    max-width: 1200px; } }
 
 /*# sourceMappingURL=style.css.map */

@@ -14,13 +14,11 @@
 section {
 	margin-top: 10px;
 	margin-bottom: 10px;
-	//@include span(full);
-	//@include clearfix;
-	@include container;
+	@include span(full);
 }
 
 .row {
-	@include container;
+	@include span(full);
 
 	.stories & {
 		margin-bottom: gutter();

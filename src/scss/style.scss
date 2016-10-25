@@ -14,21 +14,17 @@ Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, re
 // Bourbon
 // See: http://bourbon.io/docs/
 @import '../../node_modules/bourbon/app/assets/stylesheets/bourbon';
-
 // Susy
 // Susy grid system. See: http://susydocs.oddbird.net/en/latest/
 @import '../../node_modules/susy/sass/susy';
 @import '../../node_modules/susy/sass/su';
-
 @import "settings";
 @import "utils/normalize";
 @import "utils/variables.scss";
 @import "layout/rows";
 @import "utils/typography";
-
 // Main modules
 @import "layout/nav";
-
 
 body {
 	background: #fff3e3;
@@ -39,6 +35,7 @@ body {
 .wrap {
 
 }
+
 $susy: (
 	debug: (
 		image: show,
@@ -49,22 +46,25 @@ $susy: (
 );
 
 .container {
-
 	@include show-grid(overlay);
+	@include container();
+}
 
-	@include container(4 center);
-
-	@include susy-media($tabletLandscape) {
-		@include container(8 center);
-	}
-
-
-	@include susy-media($desktop)  {
-		@include container(12 center);
-		max-width: $desktop;
-		margin: 0 auto;
+@include susy-breakpoint($tabletLandscape, 1 1) {
+	.container {
+		background: rgba(250, 128, 114, 0.31);
 	}
 }
+
+@include susy-breakpoint($desktop, 12) {
+	.container {
+		background: rgba(185, 205, 250, 0.33);
+		max-width: $desktop;
+	}
+
+	//margin: 0 auto;
+}
+
 
 
 
