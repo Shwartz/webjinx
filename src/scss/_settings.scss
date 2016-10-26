@@ -10,6 +10,11 @@ $susy: (
 	column-width: false,
 	global-box-sizing: border-box,
 	last-flow: to,
+	debug: (
+		image: show,
+		color: rgba(255, 50, 50, 0.1),
+		output: background
+	),
 	/*debug: (
 		image: show,
 		color: rgba(#b4ffc0, .25),
@@ -24,3 +29,4 @@ $susy: (
 		rem: true,
 	)*/
 );
+

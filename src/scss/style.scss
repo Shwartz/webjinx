@@ -38,17 +38,10 @@ body {
 
 }
 
-$susy: (
-	debug: (
-		image: show,
-		color: rgba(255, 50, 50, 0.31),
-		output: overlay,
-		toggle: top right,
-	),
-);
+
 
 .container {
-	@include show-grid(overlay);
+	//@include show-grid(background);
 	@include container(12);
 
 	@include susy-breakpoint($desktop) {
