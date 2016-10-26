@@ -1,0 +1,36 @@
+.six-col div {
+	@include span(4 of 4);
+	@extend %extend_padding;
+
+
+
+	&:last-child {
+		@extend %extend_last;
+	}
+
+	@include susy-breakpoint($mobLandscape) {
+
+	}
+
+	@include susy-breakpoint($smallTablet) {
+
+	}
+
+	@include susy-breakpoint($tabletLandscape) {
+		@include span(2 of 6);
+		&:nth-child(3) {
+			background: salmon;
+			@include last;
+		}
+	}
+
+	@include susy-breakpoint($desktop) {
+		@include span(2 of 12 0.2);
+	}
+
+	@include susy-breakpoint(1200px) {
+		background: #ecffbe;
+	}
+	@extend .dev-bg;
+
+}

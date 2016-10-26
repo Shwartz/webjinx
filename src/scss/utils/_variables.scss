@@ -15,3 +15,71 @@ $desktop:           1200px;
 $elephant:          1600px;
 
 //Colors
+
+
+// layout vars
+%extend_padding {
+	padding: 20px;
+}
+
+%extend_last {
+	@include last;
+	background: yellow;
+}
+
+#debug {
+	position: fixed;
+	bottom: 0;
+	right: 0;
+	border: 1px solid rgba(0,0,0,0.8);
+	border-top-left-radius: 6px;
+	background: rgba(0,0,0,0.5);
+	&:after {
+		content: '0-320px';
+		padding: 2px 8px;
+		font-size: 11px;
+		color: #fff;
+	}
+
+	@include susy-breakpoint($mobLandscape) {
+		&:after {
+			content: '$mobLandscape 320 - 480px';
+		}
+	}
+
+	@include susy-breakpoint($smallTablet) {
+		&:after {
+			content: '$smallTablet 480 - 640px';
+		}
+	}
+
+	@include susy-breakpoint($tablet) {
+		&:after {
+			content: '$tablet 640 - 768px';
+		}
+	}
+
+	@include susy-breakpoint($tabletLandscape) {
+		&:after {
+			content: '$tablet 768 1024px';
+		}
+	}
+
+	@include susy-breakpoint($laptop) {
+		&:after {
+			content: '$laptop 1024 1200px';
+		}
+	}
+
+	@include susy-breakpoint($desktop) {
+		&:after {
+			content: '$desktop 1200 - 1600px';
+		}
+	}
+
+	@include susy-breakpoint($elephant) {
+		&:after {
+			content: '$elephant 1600 >>> px';
+		}
+	}
+}

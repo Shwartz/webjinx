@@ -1,0 +1,61 @@
+// Default: Content Left and aside Right
+.content {
+	@include span(12);
+	@extend %extend_padding;
+
+	@include susy-breakpoint($tabletLandscape) {
+		@include span(7 of 12 first);
+	}
+	@include susy-breakpoint($desktop) {
+		@include span(8 of 12first);
+	}
+
+	@extend .dev-bg;
+}
+
+aside {
+	@include span(12);
+	@extend %extend_padding;
+
+
+	@include susy-breakpoint($tabletLandscape) {
+		@include span(5 of 12 last);
+	}
+	@include susy-breakpoint($desktop) {
+		@include span(4 of 12 last);
+	}
+
+	@extend .dev-bg;
+}
+
+// Reversed: Content Right and aside Left
+.content-right {
+	@include span(12);
+	@extend %extend_padding;
+
+
+	@include susy-breakpoint($tabletLandscape) {
+		@include span(7 of 12 last);
+	}
+	@include susy-breakpoint($desktop) {
+		@include span(8 of 12 last);
+	}
+
+	@extend .dev-bg;
+}
+
+aside.left {
+	@include span(12);
+	@extend %extend_padding;
+
+	@extend .dev-bg;
+
+	@include susy-breakpoint($tabletLandscape) {
+		@include span(5 of 12 first);
+	}
+	@include susy-breakpoint($desktop) {
+		@include span(4 of 12 first);
+	}
+
+	@extend .dev-bg;
+}

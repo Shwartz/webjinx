@@ -22,6 +22,8 @@ Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, re
 @import "utils/normalize";
 @import "utils/variables.scss";
 @import "layout/rows";
+@import "layout/two-col";
+@import "layout/six-col";
 @import "utils/typography";
 // Main modules
 @import "layout/nav";
@@ -47,22 +49,12 @@ $susy: (
 
 .container {
 	@include show-grid(overlay);
-	@include container();
-}
+	@include container(12);
 
-@include susy-breakpoint($tabletLandscape, 1 1) {
-	.container {
-		background: rgba(250, 128, 114, 0.31);
-	}
-}
-
-@include susy-breakpoint($desktop, 12) {
-	.container {
-		background: rgba(185, 205, 250, 0.33);
+	@include susy-breakpoint($desktop) {
 		max-width: $desktop;
+		margin: 0 auto;
 	}
-
-	//margin: 0 auto;
 }
 
 

@@ -1,15 +1,7 @@
 /*
 	Rows and columns
 */
-// Local vars
-%extend_padding {
-	padding: 20px;
-}
 
-%extend_last {
-	@include last;
-	background: yellow;
-}
 
 section {
 	margin-top: 10px;
@@ -40,14 +32,8 @@ section {
 	@extend .dev-bg;
 }
 
-.col4 {
-	@include span(4 of 12);
-	@extend %extend_padding;
-	&.last {
-		@extend %extend_last;
-	}
-	@extend .dev-bg;
-}
+
+
 
 .col4-move4 {
 	@include span(isolate 3 at 4);
@@ -59,30 +45,7 @@ section {
 	@extend .dev-bg;
 }
 
-.col6 {
-	@include span(2 of 12);
-	@extend %extend_padding;
-	&.last {
-		@extend %extend_last;
-	}
 
-	.narrow & {
-		@include span(2 of 12 0.2);
-		&.last {
-			@extend %extend_last;
-		}
-	}
 
-	@include susy-breakpoint(1200px) {
-		background: #ecffbe;
-	}
-	@extend .dev-bg;
 
-}
-
-.col8 {
-	@include span(8 of 12);
-	@extend %extend_padding;
-	@extend .dev-bg;
-}
 
