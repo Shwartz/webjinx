@@ -21,8 +21,9 @@ Tags:         	black, white, light, two-columns, left-sidebar, right-sidebar, re
 @import "settings";
 @import "utils/normalize";
 @import "utils/variables.scss";
-@import "layout/rows";
+@import "layout/common";
 @import "layout/two-col";
+@import "layout/three-col";
 @import "layout/six-col";
 @import "utils/typography";
 // Main modules

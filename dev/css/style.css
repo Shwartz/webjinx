@@ -425,11 +425,11 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-.dev-bg, .col2, .col4-move4, .col4-move7, .content, aside, .content-right, aside.left, .six-col div, nav.main {
+.dev-bg, .col2, .col4-move4, .col4-move7, .content, aside, .content-right, aside.left, .three-cols div, .six-col div, nav.main {
   background: rgba(255, 255, 255, 0.8);
   outline: 1px solid #8db4a5; }
 
-.col2, .content, aside, .content-right, aside.left, .six-col div {
+.col2, .content, aside, .content-right, aside.left, .three-cols div, .six-col div {
   padding: 20px; }
 
 .col2.last {
@@ -590,6 +590,38 @@ aside.left {
       width: 31.4285714286%;
       float: left;
       margin-right: 2.8571428571%; } }
+
+.three-cols div {
+  width: 87.5%;
+  float: left;
+  margin-left: 6.25%;
+  margin-right: 6.25%;
+  margin-bottom: 2.8571428571%; }
+  @media (min-width: 480px) {
+    .three-cols div {
+      width: 44.4444444444%;
+      float: left;
+      margin-left: 2.7777777778%;
+      margin-right: 2.7777777778%; } }
+  @media (min-width: 1024px) {
+    .three-cols div {
+      width: 31.9444444444%;
+      float: left;
+      margin-left: 0.6944444444%;
+      margin-right: 0.6944444444%;
+      /*margin-left: 0;
+		&:last-child {
+			@include last;
+		}*/ } }
+  @media (min-width: 1200px) {
+    .three-cols div {
+      width: 30.5555555556%;
+      float: left;
+      margin-left: 1.3888888889%;
+      margin-right: 1.3888888889%; } }
+  @media (min-width: 1200px) {
+    .three-cols div {
+      background: #ecffbe; } }
 
 .six-col div {
   width: 87.5%;
