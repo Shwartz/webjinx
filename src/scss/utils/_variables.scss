@@ -61,7 +61,7 @@ $elephant:          1600px;
 
 	@include susy-breakpoint($tabletLandscape) {
 		&:after {
-			content: '$tablet 768 1024px';
+			content: '$tabletLandscape 768 1024px';
 		}
 	}
 
