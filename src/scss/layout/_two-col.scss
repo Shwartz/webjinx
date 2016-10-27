@@ -71,3 +71,18 @@ aside.left {
 
 	@extend .dev-bg;
 }
+
+// two col no gutter 50/50
+.two-col-no-gutter div {
+	@include span(6 of 12);
+
+	.no-gutter & {
+		@include span(6 of 12 split 0);
+	}
+
+	/*&:last-child {
+		@extend %extend_last;
+	}*/
+	@extend %extend_padding;
+	@extend .dev-bg;
+}

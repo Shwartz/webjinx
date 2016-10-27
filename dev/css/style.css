@@ -425,17 +425,12 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-.dev-bg, .col2, .col4-move4, .col4-move7, .content, aside, .content-right, aside.left, .three-cols div, .six-col div, nav.main {
+.dev-bg, .col4-move4, .col4-move7, .content, aside, .content-right, aside.left, .two-col-no-gutter div, .three-cols div, .six-col div, nav.main {
   background: rgba(255, 255, 255, 0.8);
   outline: 1px solid #8db4a5; }
 
-.col2, .content, aside, .content-right, aside.left, .three-cols div, .six-col div {
+.content, aside, .content-right, aside.left, .two-col-no-gutter div, .three-cols div, .six-col div {
   padding: 20px; }
-
-.col2.last {
-  float: right;
-  margin-right: 0;
-  background: yellow; }
 
 #debug {
   position: fixed;
@@ -489,15 +484,6 @@ section {
   margin-right: 0; }
   .stories .row {
     margin-bottom: 2.8571428571%; }
-
-.col2 {
-  width: 48.5714285714%;
-  float: left;
-  margin-right: 2.8571428571%; }
-  .no-gutter .col2 {
-    width: 50%;
-    float: left;
-    margin-right: 0; }
 
 .col4-move4 {
   width: 22.8571428571%;
@@ -590,6 +576,17 @@ aside.left {
       width: 31.4285714286%;
       float: left;
       margin-right: 2.8571428571%; } }
+
+.two-col-no-gutter div {
+  width: 48.5714285714%;
+  float: left;
+  margin-right: 2.8571428571%;
+  /*&:last-child {
+		@extend %extend_last;
+	}*/ }
+  .no-gutter .two-col-no-gutter div {
+    width: 50%;
+    float: left; }
 
 .three-cols div {
   width: 87.5%;

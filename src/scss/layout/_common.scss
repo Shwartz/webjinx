@@ -17,23 +17,6 @@ section {
 	}
 }
 
-.col2 {
-	@include span(6 of 12);
-
-	.no-gutter & {
-		@include span(6 of 12 0);
-		margin-right: 0;
-	}
-
-	&.last {
-		@extend %extend_last;
-	}
-	@extend %extend_padding;
-	@extend .dev-bg;
-}
-
-
-
 
 .col4-move4 {
 	@include span(isolate 3 at 4);
