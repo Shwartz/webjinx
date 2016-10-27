@@ -520,12 +520,20 @@ section {
     .content {
       width: 57.1428571429%;
       float: left;
-      margin-right: 2.8571428571%; } }
+      margin-right: 2.8571428571%; }
+      .two-col-reversed .content {
+        width: 57.1428571429%;
+        float: right;
+        margin-right: 0; } }
   @media (min-width: 1200px) {
     .content {
       width: 65.7142857143%;
       float: left;
-      margin-right: 2.8571428571%; } }
+      margin-right: 2.8571428571%; }
+      .two-col-reversed .content {
+        width: 65.7142857143%;
+        float: right;
+        margin-right: 0; } }
 
 aside {
   width: 100%;
@@ -536,12 +544,20 @@ aside {
     aside {
       width: 40%;
       float: right;
-      margin-right: 0; } }
+      margin-right: 0; }
+      .two-col-reversed aside {
+        width: 40%;
+        float: left;
+        margin-right: 2.8571428571%; } }
   @media (min-width: 1200px) {
     aside {
       width: 31.4285714286%;
       float: right;
-      margin-right: 0; } }
+      margin-right: 0; }
+      .two-col-reversed aside {
+        width: 31.4285714286%;
+        float: left;
+        margin-right: 2.8571428571%; } }
 
 .content-right {
   width: 100%;

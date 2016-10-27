@@ -5,9 +5,15 @@
 
 	@include susy-breakpoint($tabletLandscape) {
 		@include span(7 of 12 first);
+		.two-col-reversed & {
+			@include span(7 of 12 last);
+		}
 	}
 	@include susy-breakpoint($desktop) {
-		@include span(8 of 12first);
+		@include span(8 of 12 first);
+		.two-col-reversed & {
+			@include span(8 of 12 last);
+		}
 	}
 
 	@extend .dev-bg;
@@ -20,9 +26,15 @@ aside {
 
 	@include susy-breakpoint($tabletLandscape) {
 		@include span(5 of 12 last);
+		.two-col-reversed & {
+			@include span(5 of 12 first);
+		}
 	}
 	@include susy-breakpoint($desktop) {
 		@include span(4 of 12 last);
+		.two-col-reversed & {
+			@include span(4 of 12 first);
+		}
 	}
 
 	@extend .dev-bg;
