@@ -1,7 +1,7 @@
 nav.main {
 	margin-top: 10px;
 	margin-bottom: 10px;
-	@include container;
+	@include span(12 of 12 split);
 	padding: 10px 0;
 	@extend .dev-bg;
 

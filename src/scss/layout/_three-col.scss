@@ -1,31 +1,23 @@
 .three-cols {
-
 	display: inline-block;
 	width: 100%;
 
-
 	div {
-		//@include span(4 of 4);
-
 		@extend %extend_padding;
-
-		@include span(4 of 4 split 1);
 		margin-bottom: gutter();
 
+		@include span(12 split);
+
 		@include susy-breakpoint($smallTablet) {
-			@include span(3 of 6 split);
+			@include span(6 of 12 split);
 		}
 
 		@include susy-breakpoint($laptop) {
-			@include span(4 of 12 split 0.2);
-			/*margin-left: 0;
-			&:last-child {
-				@include last;
-			}*/
+			@include span(4 of 12 split 0.5);
 		}
 
 		@include susy-breakpoint($desktop) {
-			@include span(4 of 12 split 0.5);
+			@include span(4 of 12 split);
 
 		}
 
