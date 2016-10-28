@@ -416,7 +416,9 @@ template {
   display: none; }
 
 ul, li {
-  padding: 0; }
+  padding: 0;
+  list-style-type: none;
+  margin: 0; }
 
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
@@ -429,7 +431,7 @@ html {
   background: rgba(255, 255, 255, 0.8);
   outline: 1px solid #8db4a5; }
 
-.content, aside, .two-col-no-gutter div, .three-cols div, .six-col div {
+.col4-move4, .col4-move7, .content, aside, .two-col-no-gutter div, .three-cols div, .six-col div {
   padding: 20px; }
 
 #debug {

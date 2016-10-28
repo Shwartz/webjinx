@@ -20,11 +20,13 @@ section {
 .col4-move4 {
 	@include span(isolate 3 at 4);
 	@extend .dev-bg;
+	@extend %extend_padding;
 }
 
 .col4-move7 {
 	@include span(isolate 3 at 7);
 	@extend .dev-bg;
+	@extend %extend_padding;
 }
 
 
