@@ -1,31 +1,37 @@
-.three-cols div {
-	//@include span(4 of 4);
+.three-cols {
 
-	@extend %extend_padding;
-
-	@include span(4 of 4 split 1);
-	margin-bottom: gutter();
+	display: inline-block;
+	width: 100%;
 
 
-	@include susy-breakpoint($smallTablet) {
-		@include span(3 of 6 split);
+	div {
+		//@include span(4 of 4);
+
+		@extend %extend_padding;
+
+		@include span(4 of 4 split 1);
+		margin-bottom: gutter();
+
+		@include susy-breakpoint($smallTablet) {
+			@include span(3 of 6 split);
+		}
+
+		@include susy-breakpoint($laptop) {
+			@include span(4 of 12 split 0.2);
+			/*margin-left: 0;
+			&:last-child {
+				@include last;
+			}*/
+		}
+
+		@include susy-breakpoint($desktop) {
+			@include span(4 of 12 split 0.5);
+
+		}
+
+		@include susy-breakpoint(1200px) {
+			background: #ecffbe;
+		}
+		@extend .dev-bg;
 	}
-
-	@include susy-breakpoint($laptop) {
-		@include span(4 of 12 split 0.2);
-		/*margin-left: 0;
-		&:last-child {
-			@include last;
-		}*/
-	}
-
-	@include susy-breakpoint($desktop) {
-		@include span(4 of 12 split 0.5);
-
-	}
-
-	@include susy-breakpoint(1200px) {
-		background: #ecffbe;
-	}
-	@extend .dev-bg;
 }
