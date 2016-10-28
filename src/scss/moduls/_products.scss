@@ -1,0 +1,29 @@
+.products {
+	display: inline-block;
+	width: 100%;
+
+	div {
+		@extend %extend_padding;
+		margin-bottom: gutter();
+
+		@include span(12 split);
+
+		@include susy-breakpoint($smallTablet) {
+			@include span(6 of 12 split);
+		}
+
+		@include susy-breakpoint($laptop) {
+			@include span(4 of 12 split 0.5);
+		}
+
+		@include susy-breakpoint($desktop) {
+			@include span(4 of 12 split);
+
+		}
+
+		@include susy-breakpoint(1200px) {
+			background: #ecffbe;
+		}
+		@extend .dev-bg;
+	}
+}

@@ -41,7 +41,7 @@ module.exports = function (grunt) {
 			}
 		},
 		copy: {
-			htmldev: {
+			htmlDev: {
 				expand: true,
 				cwd: 'src/html/',
 				src: ['*.html'],
@@ -54,7 +54,7 @@ module.exports = function (grunt) {
 					}
 				}
 			},
-			htmldist: {
+			htmlDist: {
 				expand: true,
 				cwd: 'src/html/',
 				src: ['*.html'],
@@ -66,6 +66,18 @@ module.exports = function (grunt) {
 						return content;
 					}
 				}
+			},
+			assetsDev: {
+				expand: true,
+				cwd: 'src/assets/',
+				src: ['**'],
+				dest: 'dev/assets/'
+			},
+			assetsDist: {
+				expand: true,
+				cwd: 'src/assets/',
+				src: ['**'],
+				dest: 'dist/assets/'
 			}
 		},
 		clean: {
@@ -113,11 +125,15 @@ module.exports = function (grunt) {
 			},
 			html: {
 				files: ['src/html/**/*.html'],
-				tasks: ['copy:htmldev']
+				tasks: ['copy:htmlDev']
 			},
 			js: {
 				files: ['src/js/**/*.js'],
 				tasks: ['requirejs:dev']
+			},
+			img: {
+				files: ['src/assets/**'],
+				tasks: ['copy:assetsDev']
 			}
 		}
 	});
@@ -136,7 +152,7 @@ module.exports = function (grunt) {
 	grunt.registerTask('dev', [
 		'clean:dev',
 		'sass:dev',
-		'copy:htmldev',
+		'copy:htmlDev',
 		'requirejs:dev',
 		'watch'
 	]);
@@ -144,7 +160,8 @@ module.exports = function (grunt) {
 	grunt.registerTask('dist', [
 		'clean:dist',
 		'sass:dist',
-		'copy:htmldist',
+		'copy:htmlDist',
+		'copy:assetsDist',
 		'requirejs:dist'
 	]);
 };
