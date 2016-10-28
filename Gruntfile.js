@@ -153,6 +153,7 @@ module.exports = function (grunt) {
 		'clean:dev',
 		'sass:dev',
 		'copy:htmlDev',
+		'copy:assetsDev',
 		'requirejs:dev',
 		'watch'
 	]);

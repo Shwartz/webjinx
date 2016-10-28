@@ -432,7 +432,10 @@ html {
   outline: 1px solid #8db4a5; }
 
 .col4-move4, .col4-move7, .content, aside, .two-col-no-gutter div, .three-cols div, .six-col div, .products div {
-  padding: 20px; }
+  padding: 0.5em; }
+  @media (min-width: 640px) {
+    .col4-move4, .col4-move7, .content, aside, .two-col-no-gutter div, .three-cols div, .six-col div, .products div {
+      padding: 1em; } }
 
 #debug {
   position: fixed;

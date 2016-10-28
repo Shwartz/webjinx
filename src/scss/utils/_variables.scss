@@ -19,7 +19,10 @@ $elephant:          1600px;
 
 // layout vars
 %extend_padding {
-	padding: 20px;
+	padding: 0.5em;
+	@include susy-breakpoint($tablet) {
+		padding: 1em;
+	}
 }
 
 %extend_last {
