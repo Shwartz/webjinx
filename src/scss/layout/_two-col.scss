@@ -4,17 +4,17 @@
 	@extend %extend_padding;
 
 	@include susy-breakpoint($tabletLandscape) {
-		@include span(7 of 12 split);
+		@include span(8 of 12 split);
 		.two-col-reversed & {
-			@include span(7 of 12 split);
+			@include span(8 of 12 split);
 			float: right;
 		}
 	}
 
-	@include susy-breakpoint($desktop) {
-		@include span(8 of 12 split);
+	@include susy-breakpoint($laptop) {
+		@include span(9 of 12 split);
 		.two-col-reversed & {
-			@include span(8 of 12 split);
+			@include span(9 of 12 split);
 			float: right;
 		}
 	}
@@ -27,17 +27,17 @@ aside {
 	@extend %extend_padding;
 
 	@include susy-breakpoint($tabletLandscape) {
-		@include span(5 of 12 split);
+		@include span(4 of 12 split);
 		.two-col-reversed & {
-			@include span(5 of 12 split);
+			@include span(4 of 12 split);
 			float: left;
 		}
 	}
 
-	@include susy-breakpoint($desktop) {
-		@include span(4 of 12 split);
+	@include susy-breakpoint($laptop) {
+		@include span(3 of 12 split);
 		.two-col-reversed & {
-			@include span(4 of 12 split);
+			@include span(3 of 12 split);
 			float: left;
 		}
 	}

@@ -508,24 +508,24 @@ section {
   margin-right: 1.3888888889%; }
   @media (min-width: 768px) {
     .content {
-      width: 55.5555555556%;
-      float: left;
-      margin-left: 1.3888888889%;
-      margin-right: 1.3888888889%; }
-      .two-col-reversed .content {
-        width: 55.5555555556%;
-        float: left;
-        margin-left: 1.3888888889%;
-        margin-right: 1.3888888889%;
-        float: right; } }
-  @media (min-width: 1200px) {
-    .content {
       width: 63.8888888889%;
       float: left;
       margin-left: 1.3888888889%;
       margin-right: 1.3888888889%; }
       .two-col-reversed .content {
         width: 63.8888888889%;
+        float: left;
+        margin-left: 1.3888888889%;
+        margin-right: 1.3888888889%;
+        float: right; } }
+  @media (min-width: 1024px) {
+    .content {
+      width: 72.2222222222%;
+      float: left;
+      margin-left: 1.3888888889%;
+      margin-right: 1.3888888889%; }
+      .two-col-reversed .content {
+        width: 72.2222222222%;
         float: left;
         margin-left: 1.3888888889%;
         margin-right: 1.3888888889%;
@@ -538,24 +538,24 @@ aside {
   margin-right: 1.3888888889%; }
   @media (min-width: 768px) {
     aside {
-      width: 38.8888888889%;
-      float: left;
-      margin-left: 1.3888888889%;
-      margin-right: 1.3888888889%; }
-      .two-col-reversed aside {
-        width: 38.8888888889%;
-        float: left;
-        margin-left: 1.3888888889%;
-        margin-right: 1.3888888889%;
-        float: left; } }
-  @media (min-width: 1200px) {
-    aside {
       width: 30.5555555556%;
       float: left;
       margin-left: 1.3888888889%;
       margin-right: 1.3888888889%; }
       .two-col-reversed aside {
         width: 30.5555555556%;
+        float: left;
+        margin-left: 1.3888888889%;
+        margin-right: 1.3888888889%;
+        float: left; } }
+  @media (min-width: 1024px) {
+    aside {
+      width: 22.2222222222%;
+      float: left;
+      margin-left: 1.3888888889%;
+      margin-right: 1.3888888889%; }
+      .two-col-reversed aside {
+        width: 22.2222222222%;
         float: left;
         margin-left: 1.3888888889%;
         margin-right: 1.3888888889%;
@@ -666,7 +666,7 @@ h1, h2, h3, p {
           float: none; } }
     @media (min-width: 1024px) {
       .products div {
-        width: 47.2222222222%;
+        width: 30.5555555556%;
         float: left;
         margin-left: 1.3888888889%;
         margin-right: 1.3888888889%; } }
@@ -679,6 +679,12 @@ h1, h2, h3, p {
     @media (min-width: 1200px) {
       .products div {
         background: #ecffbe; } }
+
+.breadcrumb {
+  margin-bottom: 2em; }
+  .breadcrumb li {
+    display: inline-block;
+    font-size: 12px; }
 
 nav.main {
   margin-top: 10px;

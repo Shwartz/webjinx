@@ -28,7 +28,7 @@
 		}
 
 		@include susy-breakpoint($laptop) {
-			@include span(6 of 12 split);
+			@include span(4 of 12 split);
 		}
 
 		@include susy-breakpoint($desktop) {
