@@ -649,15 +649,24 @@ h1, h2, h3, p {
     float: left;
     margin-left: 1.3888888889%;
     margin-right: 1.3888888889%; }
+    .products div img {
+      width: 100%; }
+    @media (min-width: 320px) {
+      .products div img {
+        max-width: 50%;
+        float: right; } }
     @media (min-width: 480px) {
       .products div {
         width: 47.2222222222%;
         float: left;
         margin-left: 1.3888888889%;
-        margin-right: 1.3888888889%; } }
+        margin-right: 1.3888888889%; }
+        .products div img {
+          max-width: 100%;
+          float: none; } }
     @media (min-width: 1024px) {
       .products div {
-        width: 30.5555555556%;
+        width: 47.2222222222%;
         float: left;
         margin-left: 1.3888888889%;
         margin-right: 1.3888888889%; } }

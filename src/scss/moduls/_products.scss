@@ -5,15 +5,30 @@
 	div {
 		@extend %extend_padding;
 		margin-bottom: gutter();
-
 		@include span(12 split);
+
+		img {
+			width: 100%;
+		}
+
+		@include susy-breakpoint($mobLandscape) {
+			//@include span(6 of 12 split);
+			img {
+				max-width: 50%;
+				float: right;
+			}
+		}
 
 		@include susy-breakpoint($smallTablet) {
 			@include span(6 of 12 split);
+			img {
+				max-width: 100%;
+				float: none;
+			}
 		}
 
 		@include susy-breakpoint($laptop) {
-			@include span(4 of 12 split 0.5);
+			@include span(6 of 12 split);
 		}
 
 		@include susy-breakpoint($desktop) {
