@@ -1,0 +1,7 @@
+// full size
+.full {
+	@include span(12 split);
+	@extend %extend_padding;
+	@extend .dev-bg;
+}
+

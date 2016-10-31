@@ -427,14 +427,14 @@ html {
 *, *:before, *:after {
   box-sizing: inherit; }
 
-.dev-bg, .col4-move4, .col4-move7, .content, aside, .two-col-no-gutter div, .three-cols div, .six-col div, .products div, nav.main {
+.dev-bg, .col4-move4, .col4-move7, .content, aside, .two-col-no-gutter div, .three-cols div, .six-col div, .full, .products div, nav.main {
   background: rgba(255, 255, 255, 0.8);
   outline: 1px solid #8db4a5; }
 
-.col4-move4, .col4-move7, .content, aside, .two-col-no-gutter div, .three-cols div, .six-col div, .products div {
+.col4-move4, .col4-move7, .content, aside, .two-col-no-gutter div, .three-cols div, .six-col div, .full, .products div {
   padding: 0.5em; }
   @media (min-width: 640px) {
-    .col4-move4, .col4-move7, .content, aside, .two-col-no-gutter div, .three-cols div, .six-col div, .products div {
+    .col4-move4, .col4-move7, .content, aside, .two-col-no-gutter div, .three-cols div, .six-col div, .full, .products div {
       padding: 1em; } }
 
 #debug {
@@ -624,6 +624,12 @@ aside {
   @media (min-width: 1200px) {
     .six-col div {
       background: #ecffbe; } }
+
+.full {
+  width: 97.2222222222%;
+  float: left;
+  margin-left: 1.3888888889%;
+  margin-right: 1.3888888889%; }
 
 h1 {
   font-size: 1.70859375em; }
